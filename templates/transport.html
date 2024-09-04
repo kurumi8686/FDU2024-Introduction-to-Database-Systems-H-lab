@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旦享-交通</title>
+    <link rel="stylesheet" href="../static/css/base.css" charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/common.css" charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/classification.css">
+    <link rel="stylesheet" href="../static/css/books.css">
+    <link rel="stylesheet" href="../static/css/index.css" charset="UTF-8">
+</head>
+
+<body>
+    <div class="shortcut">
+        <div class="wrapper">
+            <ul class="shortcut-links">
+                <li><a href="{{ url_for('goodsupload') }}" target="_blank">发布商品</a></li>
+                <li><a href="{{ url_for('search') }}" target="_blank">搜索想要</a></li>
+                <li><a href="{{ url_for('personal_trade') }}" target="_blank">交易记录</a></li>
+                <li><a href="{{ url_for('personal_info') }}" target="_blank">个人资料</a></li>
+                <li><a href="{{ url_for('feedback') }}" target="_blank">意见反馈</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="books wrapper">
+        <div class="books_head">
+            <div>交通分类</div>
+        </div>
+        <div class="box">
+            <ul>
+                <li>
+                    <a href="#">
+                        <p>自行车<p>
+                    </a>
+                    <a href="#">山地车</a>|
+                    <a href="#">休闲车</a>|
+                    <a href="#">公路车</a>|
+
+                </li>
+                <li>
+                    <a href="#">
+                        <p>电动车<p>
+                    </a>
+                    <a href="#">雅迪</a>|
+                    <a href="#">台铃</a>|
+                    <a href="#">AA</a>|
+                    <a href="#">其他</a>|
+
+                </li>
+                <li>
+                    <a href="#">
+                        <p>其他<p>
+                    </a>
+                    <a href="#">平衡车</a>|
+                    <a href="#">滑板车</a>|
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wrapper">
+            <div class="top">
+                <ul>
+                    <li>
+                        <span>价格亲民</span>
+                    </li>
+                    <li>
+                        <span>品质保证</span>
+                    </li>
+                    <li>
+                        <span>校内运输</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="#">关于我们</a>|
+                    <a href="#">帮助中心</a>|
+                    <a href="#">售后服务</a>|
+                    <a href="#">配送与验收</a>|
+                    <a href="#">搜索推荐</a>|
+                    <a href="#">详细信息</a>|
+                </p>
+                <p>
+                    CopyRight@旦享
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

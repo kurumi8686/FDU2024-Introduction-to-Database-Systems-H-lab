@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="旦享官网，致力于打造服务复旦内部学生的二手物品交易平台">
+    <meta name="keywords" content="旦享，书籍，二手，服装，日用">
+    <title>旦享-个人信息页</title>
+    <link rel="stylesheet" href="../static/css/base.css" charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/common.css" charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/index.css" charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/personal_info.css" charset="UTF-8">
+</head>
+
+<body>
+    <form method="POST" action="{{ url_for('personal_trade', username=username) }}">
+
+    <div class="shortcut">
+        <div class="wrapper">
+            <ul class="shortcut-links">
+                <li><a href="{{ url_for('index_after') }}" target="_blank">回到主页</a></li>
+                <li><a href="{{ url_for('goodsupload') }}" target="_blank">发布商品</a></li>
+                <li><a href="{{ url_for('search') }}" target="_blank">搜索想要</a></li>
+                <li><a href="{{ url_for('personal_info') }}" target="_blank">个人资料</a></li>
+                <li><a href="{{ url_for('feedback') }}" target="_blank">意见反馈</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="body wrapper">
+        <div class="container">
+            <div class="right1">
+                <div class="one">{{username}}，您的交易记录如下：</div>
+                <div class="line"></div>
+                <div class="right_bottom">
+                    <div class="r_left">
+                        <img src={{image}} width="160" height="160">
+                        <div><a href="#"></a></div>
+                    </div>
+                    <div class="r_right">
+                        <div class="box">交易信息</div>
+                        <div class="box1">
+                            {% if purchase_goods %}
+                                <p><strong>您买到的商品</strong></p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>商品名称</th>
+                                            <th>价格</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for item in purchase_goods %}
+                                        <tr>
+                                            <td>{{ item[0] }}</td>
+                                            <td>{{ item[1] }}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            {% else %}
+                                <p><strong>您买到的商品</strong></p>
+                                <p>记录为空</p>
+                            {% endif %}
+                        </div>
+                        <div class="line"></div>
+                        <div class="box1">
+                            {% if sell_goods %}
+                                <p><strong>您在售（卖出）的商品</strong></p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>商品名称</th>
+                                            <th>价格</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for item in sell_goods %}
+                                        <tr>
+                                            <td>{{ item[0] }}</td>
+                                            <td>{{ item[1] }}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            {% else %}
+                                <p><strong>您在售（卖出）的商品</strong></p>
+                                <p>记录为空</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </form>
+</body>
+
+</html>

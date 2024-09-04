@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message_Board</title>
+    <link rel="stylesheet" id="templatecss" type="text/css" href="../static/css/message_board.css">
+    <style>
+        body {
+          background-image: url("../static/images/liz4.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+         <form action="{{ url_for('goodsdownload') }}" method="post" class="basic-grey">
+                 <h1>Contact Form
+                     <span>Please fill all the texts in the fields.</span>
+                 </h1>
+                 <label>
+                          <span>请输入商品名称：</span>
+                          <input type="text" name="goodsname" placeholder="您要下架的商品名称" />
+                 </label>
+                 <label>
+                          <span>&nbsp;</span>
+                          <input type="submit" class="button" value="确认下架" />
+                 </label>
+         </form>
+
+    <script>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    alert('{{ message }}');
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% if "商品下架成功！" in messages %}
+            window.location.href = "/index_after";
+        {% endif %}
+    </script>
+
+</body>
+
+</html>

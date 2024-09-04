@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旦享-登录页面</title>
+    <style>
+        body{
+         background-image: url('../static/images/lucy.jpg/');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: local;
+        }
+       form {
+           width: 30%;
+           height:auto;
+           margin: 0 auto;
+           margin-top:15%;
+           text-align:center;
+           background: #00000060;
+           padding:20px 50px;
+           font-family: 'Roboto', sans-serif;
+           font-size: 16px;
+           color:darkblue;
+       }
+        form .bot{
+            margin-top:15px;
+            width:180px;
+            height:30px;
+            font-size:20px;
+            font-weight:700;
+            color: #ffffff;
+            background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);
+            border: 0;
+            border-radius:15px;
+         }
+		form .log:hover{
+			width: 200px;
+			height: 50px;
+			border: 5px #00008B;
+			border-radius: 30%;
+			font-size: 24px;
+		}
+        form .log{
+            width:180px;
+            border: 0;
+            border-bottom: 2px solid black;
+            padding 5px 10px;
+            background: #ffffff00;
+            color: #3498db;
+            margin-top: 20px;
+        }
+        form .log::placeholder {
+            color: #000000;
+        }
+        form .zi{
+            align = "center";
+            font-size:40px;
+            color:pink;
+        }
+        .meta-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.8); /* 背景颜色，这里设置了半透明白色 */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+        }
+        .meta-container p {
+            margin: 0;
+            font-size: 16px; /* 增加字体大小 */
+            font-family: 'Roboto', sans-serif; /* 使用 Roboto 字体 */
+            color: #333333; /* 文字颜色 */
+            line-height: 1.5;
+        }
+  </style>
+</head>
+
+<body>
+    <form action="{{ url_for('login') }}" method="post">
+    <table align="center">
+        <h1 class="zi">Login</h1>
+        <audio src="../static/mp3/flowerdance.mp3" controls="controls"></audio>
+        <tr><td>
+                username:<input class="log" name="username" type="text" placeholder="用户名">
+        </td></tr>
+        <tr><td>
+                password:<input class="log" name="password" type="text" placeholder="密码">
+        </td></tr>
+        <tr><td>
+                <input style="cursor:pointer" class="bot" name="bottom" type="submit" value="点击登录">
+        </td></tr>
+        <tr><td style="text-align: center;">
+                <a href="{{ url_for('other') }}">忘记密码?</a>
+        </td></tr>
+        <div class="meta-container">
+            <p>旦享官网，致力于打造服务复旦学生的二手物品交易平台</p>
+            <p>旦享———书籍，服装，日用，运动</p>
+        </div>
+     </table>
+    </form>
+
+    <script>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    alert('{{ message }}');
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+
+        {% if "登录成功！" in messages %}
+            window.location.href = "/index_after";
+        {% elif "用户名或密码输入错误！" in messages %}
+            window.location.href = "/login";
+        {% elif message == "修改成功！请您重新登录" %}
+            window.location.href = "/login";
+        {% endif %}
+    </script>
+
+
+</body>
+
+</html>

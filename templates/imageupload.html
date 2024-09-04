@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上传图片</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        form {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .thehead {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 8px;
+        }
+        .thehead h2 {
+            margin: 0;
+            color: #333;
+        }
+        .file {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .file_up {
+            text-align: center;
+        }
+        .file_up input {
+            display: none;
+        }
+        .file_up label {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 20px;
+            line-height: inherit;
+            margin-left: 196px;
+        }
+        input[type=submit], input[type=reset] {
+            width: 240px;
+            height: 32px;
+            text-align: center;
+            background-color: #3897f0;
+            border-radius: 15px;
+            margin-left: 75px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        input[type=submit]:hover {
+            background-color: #27ba9b;
+        }
+        input[type=reset]:hover {
+            background-color: #980000;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="POST" action="{{ url_for('imageupload') }}" enctype="multipart/form-data">
+        <div class="thehead">
+            <h2>上传图片</h2>
+        </div>
+        <div class="body">
+            <div class="file">
+                <div class="file_up">
+                    <label for="image">点此上传头像，将交由官方审核</label>
+                    <input type="file" multiple name="image" id="image">
+                </div>
+            </div>
+            <input type="submit" value="提交">
+            <input type="reset" value="重置">
+        </div>
+    </form>
+
+    <script>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    alert('{{ message }}');
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% if "图片上传成功！" in messages %}
+            window.location.href = "/index_after";
+        {% endif %}
+    </script>
+</body>
+
+</html>

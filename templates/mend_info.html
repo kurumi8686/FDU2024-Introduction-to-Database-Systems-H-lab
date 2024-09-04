@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="旦享官网，致力于打造服务复旦内部学生的二手物品交易平台">
+    <meta name="keywords" content="旦享，书籍，二手，服装，日用">
+    <title>旦享-个人信息页</title>
+    <link rel="stylesheet" href="../static/css/base.css" charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/common.css" charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/index.css" charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/personal_info.css" charset="UTF-8">
+</head>
+
+<body>
+    <form method="POST" action="{{ url_for('mend_info') }}">
+
+    <div class="shortcut">
+        <div class="wrapper">
+            <ul class="shortcut-links">
+                <li><a href="{{ url_for('goodsupload') }}" target="_blank">发布商品</a></li>
+                <li><a href="{{ url_for('search') }}" target="_blank">搜索想要</a></li>
+                <li><a href="{{ url_for('personal_trade') }}" target="_blank">交易记录</a></li>
+                <li><a href="{{ url_for('personal_info') }}" target="_blank">个人资料</a></li>
+                <li><a href="{{ url_for('feedback') }}" target="_blank">意见反馈</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="body wrapper">
+        <div class="container">
+            <div class="left">
+                <p>
+                    <span>{{ username }}</span>
+                </p>
+                <div class="left_bottom1">
+                    <ul>
+                        <li><a href="{{ url_for('logout') }}">[退出登录]</a></li>
+                    </ul>
+                </div>
+                <div class="left_bottom">
+                    <ul>
+                        <li><a href="{{ url_for('imageupload') }}">更换头像</a></li>
+                        <li></li>
+                        <li>在右侧直接修改个人信息</li>
+                        <li>不需要修改的板块不用填</li>
+                        <li> 最后点击提交修改即可 </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="one">个人信息修改</div>
+                <div class="line"></div>
+                <div class="right_bottom">
+                    <div class="r_left">
+                        <img src="../static/images/tubiao.jpg" alt="">
+                    </div>
+                    <div class="r_right">
+                        <div class="box">
+                            <input type="text" name="username" placeholder="姓名" class="larger-placeholder">
+                        </div>
+                        <div class="line"></div>
+                        <div class="box">
+                            <input type="text" name="uid" placeholder="复旦uid" class="larger-placeholder">
+                        </div>
+                        <div class="line"></div>
+                        <div class="box">
+                            <label for="sex">sex：</label>
+                            <select id="sex" name="sex" class="larger-select">
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                                <option value="其它">其它</option>
+                            </select>
+                        </div>
+                        <div class="line"></div>
+                        <div class="box">
+                            <label for="campus">campus：</label>
+                            <select id="campus" name="campus" class="larger-select">
+                                <option value="邯郸校区">邯郸校区</option>
+                                <option value="枫林校区">枫林校区</option>
+                                <option value="张江校区">张江校区</option>
+                                <option value="江湾校区">江湾校区</option>
+                                <option value="其它学校">其它学校</option>
+                            </select>
+                        </div>
+                        <div class="line"></div>
+                        <div class="box">
+                            <input type="text" name="intro" placeholder="简介" class="larger-placeholder">
+                        </div>
+                        <div class="line"></div>
+                        <div><input type="submit" value="提交修改"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="wrapper">
+                <div class="top">
+                    <ul>
+                        <li>
+                            <span>价格亲民</span>
+                        </li>
+                        <li>
+                            <span>品质保证</span>
+                        </li>
+                        <li>
+                            <span>校内运输</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <p>
+                        <a href="#">关于我们</a>|
+                        <a href="#">帮助中心</a>|
+                        <a href="#">售后服务</a>|
+                        <a href="#">配送与验收</a>|
+                        <a href="#">搜索推荐</a>|
+                        <a href="#">详细信息</a>|
+                    </p>
+                    <p>
+                        CopyRight@旦享
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    alert('{{ message }}');
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% if message == "该用户名太热门了喵，请换一个吧~" %}
+           window.location.href = "/mend_info";
+        {% elif message == "格式错误（不允许带有英文引号）！" %}
+           window.location.href = "/mend_info";
+        {% elif message == "修改成功！请您重新登录" %}
+           window.location.href = "/login";
+        {% endif %}
+
+    </script>
+
+</body>
+
+</html>

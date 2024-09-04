@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旦享-书籍</title>
+    <link rel="stylesheet" href="../static/css/base.css" charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/common.css" charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/classification.css">
+    <link rel="stylesheet" href="../static/css/books.css">
+    <link rel="stylesheet" href="../static/css/index.css" charset="UTF-8">
+</head>
+
+<body>
+    <div class="shortcut">
+        <div class="wrapper">
+            <ul class="shortcut-links">
+                <li><a href="{{ url_for('goodsupload') }}" target="_blank">发布商品</a></li>
+                <li><a href="{{ url_for('search') }}" target="_blank">搜索想要</a></li>
+                <li><a href="{{ url_for('personal_trade') }}" target="_blank">交易记录</a></li>
+                <li><a href="{{ url_for('personal_info') }}" target="_blank">个人资料</a></li>
+                <li><a href="{{ url_for('feedback') }}" target="_blank">意见反馈</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="books wrapper">
+        <div class="books_head">
+            <div>书籍分类</div>
+        </div>
+        <div class="box">
+            <ul>
+                <li>
+                    <a href="#">
+                        <p>教材/资料<p>
+                    </a>
+                    <a href="#">汉语言文学类</a>|
+                    <a href="#">历史学类</a>|
+                    <a href="#">哲学类</a>|
+                    <a href="#">外国语言文学类</a>|
+                    <a href="#">新闻类</a>|
+                    <a href="#">社会科学类</a>|
+                    <a href="#">法学类</a>|
+                    <a href="#">经济学管理学类</a>|
+                    <a href="#">政治学类</a>|
+                    <a href="#">数学类</a>|
+                    <a href="#">自然科学类</a>|
+                    <a href="#">技术科学（计算机）类</a>|
+                    <a href="#">航空航天类</a>|
+                    <a href="#">工科类</a>|
+                    <a href="#">医学类</a>|
+                    <a href="#">政治类</a>|
+                    <a href="#">七模</a>|
+                    <a href="#">经典名著</a>|
+                    <a href="#">其它</a>>
+                </li>
+                <li>
+                    <a href="#">
+                        <p>小说<p>
+                    </a>
+                    <a href="#">悬疑、推理</a>|
+                    <a href="#">玄幻</a>|
+                    <a href="#">惊悚</a>|
+                    <a href="#">悬疑、推理</a>|
+                    <a href="#">中国近当代</a>|
+                    <a href="#">中国古典</a>|
+                    <a href="#">武侠</a>|
+                    <a href="#">外国</a>|
+                    <a href="#">穿越</a>|
+                    <a href="#">爱情</a>|
+                </li>
+                <li>
+                    <a href="#">
+                        <p>文学<p>
+                    </a>
+                    <a href="#">中国古诗词</a>|
+                    <a href="#">外国古诗词</a>|
+                    <a href="#">文学理论</a>|
+                    <a href="#">纪实文学</a>|
+                    <a href="#">戏剧</a>|
+                    <a href="#">文学评论与鉴赏</a>|
+                    <a href="#">中国古代随笔</a>|
+                    <a href="#">中国现当代随笔</a>|
+                </li>
+                <li>
+                    <a href="#">
+                        <p>传记<p>
+                    </a>
+                    <a href="#">历代帝王</a>|
+                    <a href="#">领袖首脑</a>|
+                    <a href="#">历史人物</a>|
+                    <a href="#">军事人物</a>|
+                    <a href="#">女性人物</a>|
+                    <a href="#">国学大师</a>|
+                    <a href="#">艺术家</a>|
+                    <a href="#">科学家</a>|
+                    <a href="#">哲学家</a>|
+                </li>
+                <li>
+                    <a href="#">
+                        <p>轻小说/漫画<p>
+                    </a>
+                    <a href="#">大陆漫画</a>|
+                    <a href="#">港台漫画</a>|
+                    <a href="#">日韩漫画</a>|
+                    <a href="#">画集</a>|
+                    <a href="#">欧美漫画</a>|
+                    <a href="#">轻小说</a>|
+                    <a href="#">世界经典漫画集</a>|
+                    <a href="#">小说/名著漫画版</a>|
+                    <a href="#">动漫学堂</a>|
+                </li>
+                <li>
+                    <a href="#">
+                        <p>艺术/摄影<p>
+                    </a>
+                    <a href="#">绘画</a>|
+                    <a href="#">书法篆刻</a>|
+                    <a href="#">音乐</a>|
+                    <a href="#">设计</a>|
+                    <a href="#">摄影</a>|
+                    <a href="#">艺术理论</a>|
+                    <a href="#">小人书</a>|
+                    <a href="#">画传</a>|
+                    <a href="#">人物合集</a>|
+                    <a href="#">摄影作品集</a>|
+                    <a href="#">后期处理</a>|
+                    <a href="#">摄影技法/教程</a>|
+                    <a href="#">摄影理论</a>|
+                    <a href="#">摄影入门</a>|
+                    <a href="#">摄影进阶</a>|
+                    <a href="#">分类摄影</a>|
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wrapper">
+            <div class="top">
+                <ul>
+                    <li>
+                        <span>价格亲民</span>
+                    </li>
+                    <li>
+                        <span>品质保证</span>
+                    </li>
+                    <li>
+                        <span>校内运输</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="#">关于我们</a>|
+                    <a href="#">帮助中心</a>|
+                    <a href="#">售后服务</a>|
+                    <a href="#">配送与验收</a>|
+                    <a href="#">搜索推荐</a>|
+                    <a href="#">详细信息</a>|
+                </p>
+                <p>
+                    CopyRight@旦享
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

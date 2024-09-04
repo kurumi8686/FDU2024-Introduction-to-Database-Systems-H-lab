@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/content.css">
+    <title>商品详情页</title>
+</head>
+
+<body>
+
+    <form method="POST" action="{{ url_for('content', id=id) }}">
+
+        <div class="shortcut">
+            <div class="wrapper">
+                <ul class="shortcut-links">
+                    <li><a href="{{ url_for('goodsupload') }}" target="_blank">发布商品</a></li>
+                    <li><a href="{{ url_for('search') }}" target="_blank">搜索想要</a></li>
+                    <li><a href="{{ url_for('personal_trade') }}" target="_blank">交易记录</a></li>
+                    <li><a href="{{ url_for('personal_info') }}" target="_blank">个人资料</a></li>
+                    <li><a href="{{ url_for('feedback') }}" target="_blank">意见反馈</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="introduction">
+            <div class="wrapper">
+                <div class="line"></div>
+                <div class="one">
+                    <h2>商品详情界面 <span>{{goods_name}}</span></h2>
+                </div>
+                <div class="line2"></div>
+            </div>
+        </div>
+
+
+        <div class="shop_goods wrapper">
+            <div class="left">
+                <ul>
+                    <li><a href="#"><img src={{image}}></a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="goods_name">
+                    {{goods_name}}
+                </div>
+                <div class="line"></div>
+                <div class="price">
+                    PRICE: ￥<span>{{price}}</span>
+                </div>
+
+                <div class="goods_info">
+                    <table>
+                        <th colspan="2">商品详情信息如下：</th>
+                        <tr>
+                            <td>商品类别：</td>
+                            <td>{{type}}</td>
+                        </tr>
+                        <tr>
+                            <td>商品描述：</td>
+                            <td>{{description}}</td>
+                        </tr>
+                        <tr>
+                            <td>卖家：</td>
+                            <td>{{seller}}</td>
+                        </tr>
+                        <tr>
+                            <td>卖家所在校区：</td>
+                            <td>{{campus}}</td>
+                        </tr>
+                        <tr>
+                            <td>卖家微信：</td>
+                            <td>{{wx}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact_seller">
+            <h2>想要购买商品？请添加卖家微信联系购买吧！</h2>
+            <h3>！！官方提醒！！小心诈骗！！</h3>
+        </div>
+
+
+        <div class="footer">
+            <div class="wrapper">
+                <div class="top">
+                    <ul>
+                        <li>
+                            <span>价格亲民</span>
+                        </li>
+                        <li>
+                            <span>品质保证</span>
+                        </li>
+                        <li>
+                            <span>校内运输</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <p>
+                        <a href="#">关于我们</a>|
+                        <a href="#">帮助中心</a>|
+                        <a href="#">售后服务</a>|
+                        <a href="#">配送与验收</a>|
+                        <a href="#">搜索推荐</a>|
+                        <a href="#">详细信息</a>|
+                    </p>
+                    <p>
+                        CopyRight@旦享
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

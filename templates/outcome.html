@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索结果</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif; /* 修改字体 */
+            border: 2px solid #ddd; /* 添加整体边框 */
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            border-right: 1px solid #ddd; /* 添加右边框 */
+        }
+        tr:last-child td { /* 最后一行的边框 */
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>搜索到的商品</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>商品id</th>
+                <th>商品名称</th>
+                <th>所在校区</th>
+                <th>商品价格</th>
+            </tr>
+        </thead>
+        <tbody id="productLinks"></tbody>
+    </table>
+
+    <script>
+        // 后端返回的商品信息数量
+        var productCount = {{ number }};
+        // 获取用于显示超链接的 DOM 元素
+        var productLinksContainer = document.getElementById('productLinks');
+        // 后端返回的商品信息数组
+        // 使用 Jinja2 语法渲染 productdata 变量，并通过 tojson 过滤器将其转换为 JSON 格式
+        var productData = {{ productdata | tojson }};
+        // 动态生成表格内容
+        for (var i = 0; i < productCount; i++) {
+            var row = document.createElement('tr');
+            var idCell = document.createElement('td')
+            var nameCell = document.createElement('td');
+            var campusCell = document.createElement('td');
+            var priceCell = document.createElement('td');
+            // 分割商品名称、所在校区和价格
+            var nameParts = productData[i].goods_name.split('||');
+            var id = productData[i].id;
+            var name = nameParts[0].trim();
+            var campus = nameParts[1].trim();
+            var price = nameParts[2].trim();
+            // 创建超链接
+            var link = document.createElement('a');
+            link.href = '/content/' + productData[i].id; // 设置超链接的目标 URL（对应商品id）
+            link.textContent = name; // 设置超链接的文本内容
+            // 设置表格单元格内容
+            idCell.textContent = id;
+            nameCell.appendChild(link);
+            campusCell.textContent = campus;
+            priceCell.textContent = price;
+            // 将单元格添加到行中
+            row.appendChild(idCell)
+            row.appendChild(nameCell);
+            row.appendChild(campusCell);
+            row.appendChild(priceCell);
+            // 将行添加到表格中
+            productLinksContainer.appendChild(row);
+        }
+    </script>
+
+</body>
+
+
+</html>

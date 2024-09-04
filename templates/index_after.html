@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="旦享官网，致力于打造服务复旦内部学生的二手物品交易平台">
+    <meta name="keywords" content="旦享，书籍，二手，服装，日用">
+    <title>旦享-主页</title>
+    <link rel="stylesheet" href="../static/css/base.css" charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/common.css" charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/index.css" charset="UTF-8">
+</head>
+
+<body>
+    <div class="shortcut">
+        <div class="wrapper">
+            <ul class="shortcut-links">
+                <li><a href="{{ url_for('goodsupload') }}" target="_blank">发布商品</a></li>
+                <li><a href="{{ url_for('search') }}" target="_blank">搜索想要</a></li>
+                <li><a href="{{ url_for('personal_trade') }}" target="_blank">交易记录</a></li>
+                <li><a href="{{ url_for('personal_info') }}" target="_blank">个人资料</a></li>
+                <li><a href="{{ url_for('feedback') }}" target="_blank">意见反馈</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header wrapper">
+        <div class="logo">
+            <h1><a href="#">旦享</a></h1>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="wrapper">
+            <div class="aside">
+                <ul>
+                    <li><a href="{{ url_for('books') }}" target="_blank">书籍<span>小说、散文</span></a></li>
+                    <li><a href="{{ url_for('dailyexpense') }}" target="_blank">日用/衣物<span>水杯、鞋子</span></a></li>
+                    <li><a href="{{ url_for('transport') }}" target="_blank">交通<span>自行车、电动车</span></a></li>
+                    <li><a href="{{ url_for('sport') }}" target="_blank">体育<span>球拍</span></a></li>
+                    <li><a href="{{ url_for('electronic') }}" target="_blank">数码<span>相机、手表</span></a></li>
+                    <li><a href="{{ url_for('food') }}" target="_blank">食品/跑腿<span>面包、带早餐</span></a></li>
+                    <li><a href="#">其它<span></span></a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <img src="../static/images/fudan.png">
+            </div>
+            <div class="description">
+                <p>旦享官网，致力于打造服务复旦学生的二手物品交易平台</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="goods wrapper">
+        <div class="hd">
+            <h2>今日推荐
+                <span>品质靠谱、人气爆款</span>
+            </h2>
+        </div>
+        <div class="bd clearfix">
+            <ul>
+                <li><a href="#">
+                        <img src={{result[1].image}} width="100" height="230">
+                        <h3>{{result[1].goods_name}}</h3>
+                        <div>￥<span>{{result[1].price}}</span></div>
+                    </a></li>
+                <li><a href="#">
+                        <img src={{result[2].image}} width="100" height="230">
+                        <h3>{{result[2].goods_name}}</h3>
+                        <div>￥<span>{{result[2].price}}</span></div>
+                    </a></li>
+                <li><a href="#">
+                        <img src={{result[3].image}} width="100" height="230">
+                        <h3>{{result[3].goods_name}}</h3>
+                        <div>￥<span>{{result[3].price}}</span></div>
+                    </a></li>
+                <li><a href="#">
+                        <img src={{result[4].image}} width="100" height="230">
+                        <h3>{{result[4].goods_name}}</h3>
+                        <div>￥<span>{{result[4].price}}</span></div>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="goods wrapper">
+        <div class="hd">
+            <h2>热门商品
+                <span>品质靠谱、人气爆款</span>
+            </h2>
+        </div>
+        <div class="bd clearfix">
+            <ul>
+                <li><a href="#">
+                        <img src={{result[5].image}} width="100" height="230">
+                        <h3>{{result[5].goods_name}}</h3>
+                        <div>￥<span>{{result[5].price}}</span></div>
+                    </a></li>
+                <li><a href="#">
+                        <img src={{result[6].image}} width="100" height="230">
+                        <h3>{{result[6].goods_name}}</h3>
+                        <div>￥<span>{{result[6].price}}</span></div>
+                    </a></li>
+                <li><a href="#">
+                        <img src={{result[7].image}} width="100" height="230">
+                        <h3>{{result[7].goods_name}}</h3>
+                        <div>￥<span>{{result[7].price}}</span></div>
+                    </a></li>
+                <li><a href="#">
+                        <img src={{result[8].image}} width="100" height="230">
+                        <h3>{{result[8].goods_name}}</h3>
+                        <div>￥<span>{{result[8].price}}</span></div>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="wrapper">
+            <div class="top">
+                <ul>
+                    <li>
+                        <span>价格亲民</span>
+                    </li>
+                    <li>
+                        <span>品质保证</span>
+                    </li>
+                    <li>
+                        <span>校内运输</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="#">关于我们</a>|
+                    <a href="#">帮助中心</a>|
+                    <a href="#">售后服务</a>|
+                    <a href="#">配送与验收</a>|
+                    <a href="#">搜索推荐</a>|
+                    <a href="#">详细信息</a>|
+                </p>
+                <p>CopyRight@旦享</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    alert('{{ message }}');
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% if "登录成功！" in messages %}
+            window.location.href = "/index_after";
+        {% elif "用户名或密码输入错误！" in messages %}
+            window.location.href = "/login";
+        {% elif "发布成功！" in messages %}
+            window.location.href = "/index_after";
+        {% elif "图片上传成功！" in messages %}
+            window.location.href = "/index_after";
+        {% elif "我们已收到您的反馈！" in messages %}
+            window.location.href = "/index_after";
+        {% elif "请输入正确的手机号！" in messages %}
+            window.location.href = "/index_after";
+        {% endif %}
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旦享-注册页面</title>
+    <style>
+        body{
+         background-image: url('../static/images/remnn.jpg/');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: local;
+        }
+       form {
+           width: 30%;
+           height:auto;
+           margin: 0 auto;
+           margin-top:15%;
+           text-align:center;
+           background: #00000060;
+           padding:20px 50px;
+           font-family: 'Roboto', sans-serif;
+           font-size: 16px;
+           color:darkblue;
+       }
+        form .bot{
+            margin-top:15px;
+            width:180px;
+            height:30px;
+            font-size:20px;
+            font-weight:700;
+            color: #ffffff;
+            background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);
+            border: 0;
+            border-radius:15px;
+         }
+		form .log:hover{
+			width: 200px;
+			height: 50px;
+			border: 5px #00008B;
+			border-radius: 30%;
+			font-size: 24px;
+		}
+        form .log{
+            width:180px;
+            border: 0;
+            border-bottom: 2px solid black;
+            padding 5px 10px;
+            background: #ffffff00;
+            color: #3498db;
+            margin-top: 20px;
+        }
+        form .log::placeholder {
+            color: #000000;
+        }
+        form .zi{
+            align = "center";
+            font-size:40px;
+            color:pink;
+        }
+        .meta-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.8); /* 背景颜色，这里设置了半透明白色 */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+        }
+        .meta-container p {
+            margin: 0;
+            font-size: 16px; /* 增加字体大小 */
+            font-family: 'Roboto', sans-serif; /* 使用 Roboto 字体 */
+            color: #333333; /* 文字颜色 */
+            line-height: 1.5;
+        }
+  </style>
+</head>
+
+<body>
+   <form action="{{ url_for('register') }}" method="post">
+    <table align="center">
+        <h1 class="zi">Register</h1>
+        <audio src="../static/mp3/bluebird.mp3" controls="controls"></audio>
+        <tr><td>
+                username:<input class="log" name="username" type="text" placeholder="请输入用户名">
+        </td></tr>
+        <tr><td>
+                password:<input class="log" name="password" type="text" placeholder="请输入密码">
+        </td></tr>
+        <tr><td>
+                password_affirm:<input class="log" name="password_again" type="text" placeholder="请确认密码">
+        </td></tr>
+        <tr><td>
+                phone_number:<input class="log" name="phone_number" type="text" placeholder="请输入手机号">
+        </td></tr>
+        <tr><td>
+                <input style="cursor:pointer" class="bot" name="bottom" type="submit" value="注册完成">
+        </td></tr>
+        <tr><td style="text-align: center;">
+                <a href="{{ url_for('login') }}">已有账号？</a>
+        </td></tr>
+        <div class="meta-container">
+            <p>旦享官网，致力于打造服务复旦学生的二手物品交易平台</p>
+            <p>旦享———书籍，服装，日用，运动</p>
+        </div>
+     </table>
+    </form>
+
+    <script>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    alert('{{ message }}');
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% if "该用户名太热门了喵，请换一个吧~" in messages %}
+            window.location.href = "/register";
+        {% elif "格式错误（不允许带有英文引号）！" in messages %}
+            window.location.href = "/register";
+        {% elif "两次密码输入不一致！" in messages %}
+            window.location.href = "/register";
+        {% elif "注册成功！请登录" in messages %}
+            window.location.href = "/login";
+        {% elif "请输入正确的手机号！" in messages %}
+            window.location.href = "/index_after";
+        {% endif %}
+    </script>
+
+</body>
+</html>

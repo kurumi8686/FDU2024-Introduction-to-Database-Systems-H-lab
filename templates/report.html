@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message_Board</title>
+    <link rel="stylesheet" id="templatecss" type="text/css" href="../static/css/message_board.css">
+    <style>
+        body {
+          background-image: url("../static/images/liz4.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="{{ url_for('report') }}" method="post" class="basic-grey">
+        <h1>Report Form
+            <span>Please fill all the texts in the fields.</span>
+        </h1>
+        <label>
+            <span>Username:</span>
+            <input id="username" type="text" name="username" placeholder="请输入你要举报用户的用户名" />
+        </label>
+        <label>
+            <span>Report Reason:</span>
+            <textarea id="reason" type="text" name="reason" placeholder="请详细说明举报原因"></textarea>
+        </label>
+        <label>
+            <span>&nbsp;</span>
+            <input type="submit" class="button" value="Report" />
+        </label>
+
+    <script>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    alert('{{ message }}');
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% if "用户名输入错误！请准确输入" in messages %}
+            window.location.href = "/report";
+        {% elif "举报成功，请等待我们的处理。" in messages %}
+            window.location.href = "/index_after";
+        {% endif %}
+    </script>
+
+</body>
