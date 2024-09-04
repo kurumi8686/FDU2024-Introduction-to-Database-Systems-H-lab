@@ -1,0 +1,136 @@
+/* 此处是banner */
+
+.banner {
+    height: 600px;
+    background-color: #FFC0CB;
+    padding-left: 200px;
+}
+
+.banner .wrapper {
+    position: relative;
+    height: 600px;
+    margin: 30px auto;
+}
+
+.banner .wrapper li img {
+    height: 560px;
+    padding-left: 300px;
+}
+
+.banner .aside {
+    position: absolute;
+    left: -50px;
+    top: 20px;
+    width: 400px;
+    height: 560px;
+    background-color: #fff
+}
+
+.banner .aside li {
+    width: 400px;
+    height: 80px;
+    line-height: 60px;
+}
+
+.banner .aside li a {
+    display: block;
+    position: relative;
+    color: #333;
+    height: 80px;
+    padding-left: 35px;
+    padding-right: 20px;
+    border-left: #333 1px solid;
+    border-bottom: #333 1px solid;
+    font-size: 27px;
+    box-shadow: -5px 2px 4px;
+}
+
+.banner .aside a span {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.banner .aside li a:hover {
+    background-color: #3897f0;
+}
+
+.banner .logo {
+    margin-left: 600px;
+    margin-right: 40px;
+}
+
+.banner img {
+    height: 400px;
+}
+
+.banner .description {
+    position: absolute;
+    bottom: 45px;
+    right: 90px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.banner .description p {
+    margin: 0;
+    font-size: 25px;
+    color: #333;
+    line-height: 1.5;
+}
+
+
+
+.goods .hd {
+    height: 100px;
+}
+
+.goods .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.goods .hd h2 span {
+    font-size: 16px;
+    color: #999;
+    padding-left: 34px;
+}
+
+.goods .hd a {
+    float: right;
+    color: #999;
+    margin-top: 10px;
+}
+
+.goods .bd {
+    overflow: hidden;
+}
+
+.goods .bd li {
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #1d4ab1;
+}
+
+.goods .bd li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.goods .bd li img {
+    width: 304px;
+}
+
+.goods .bd li h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.goods .bd li div {
+    font-size: 23px;
+}

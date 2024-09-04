@@ -1,0 +1,163 @@
+.line2 {
+    height: 2px;
+    border: none;
+    background-color: #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.introduction .wrapper {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #ccc;
+    box-sizing: border-box;
+}
+
+.introduction .wrapper h2 {
+    font-size: 28px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.introduction .wrapper h2 span {
+    margin-left: 30px;
+    font-size: 20px;
+    color: #989193;
+}
+
+.introduction span {
+    font-size: 18px;
+    color: #777;
+    margin-left: 0;
+}
+
+.shop_goods {
+    margin-top: 40px;
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: center; /* 垂直居中 */
+}
+
+.shop_goods img {
+    max-width: 75%;
+    margin: 0 auto; /* 居中图片 */
+}
+
+.shop_goods ol {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    list-style: none; /* 移除列表样式 */
+    padding: 0; /* 移除内边距 */
+    margin-top: 20px; /* 添加上边距 */
+}
+
+.shop_goods ol li {
+    width: 12px; /* 减小圆点大小 */
+    height: 12px;
+    background-color: #999; /* 调整颜色 */
+    border-radius: 50%;
+    margin-right: 12px; /* 减小间距 */
+    cursor: pointer;
+}
+
+.right {
+    width: 50%;
+}
+
+.right .goods_name {
+    font-size: 32px; /* 调整字号 */
+    color: #526fbe;
+}
+
+.right .advertisement {
+    margin-top: 10px;
+    font-size: 18px; /* 减小字号 */
+    color: #333; /* 调整颜色 */
+    cursor: pointer;
+}
+
+.right .price {
+    padding: 10px 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.right .price span {
+    font-size: 28px;
+    color: #f038ff;
+}
+
+.right .goods_info {
+    margin-top: 30px;
+}
+
+.right .goods_info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.right .goods_info td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.right .goods_info td:first-child {
+    font-weight: bold;
+    width: 40%;
+}
+
+.right .goods_info td:last-child {
+    text-align: left;
+}
+
+.contact_seller {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact_seller h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact_seller .box {
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.box input {
+    font-size: 18px;
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+.contact_seller .seller {
+    margin-top: 20px;
+    height: 40px;
+    line-height: 40px;
+    width: 200px; /* 固定宽度 */
+    text-align: center;
+    background-color: #526fbe; /* 调整颜色 */
+    border-radius: 20px; /* 圆角 */
+    cursor: pointer;
+    margin: 0 auto; /* 居中 */
+}
+
+.seller a {
+    color: #fff;
+}
+
+.seller a:hover {
+    color: #ffd9a0;
+}

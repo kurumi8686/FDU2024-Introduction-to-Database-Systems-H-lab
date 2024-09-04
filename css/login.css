@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #fafafa;
+    font-size: 14px;
+}
+
+
+.wrapper .header {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    margin: 150px auto;
+    border-top: 1px solid #000;
+    box-shadow: 3px 3px 3px;
+}
+
+.wrapper .header .top,
+.wrapper .signup {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    padding: 40px 40px 20px;
+}
+
+.wrapper .header .logo {
+    display: block;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.wrapper .header .form .input_field {
+    margin-bottom: 5px;
+}
+
+.wrapper .header .form .input_field .input {
+    width: 100%;
+    background: #fafafa;
+    border: 1px solid #efefef;
+    font-size: 12px;
+    border-radius: 3px;
+    color: #262626;
+    padding: 10px;
+}
+
+.wrapper .header .form .input_field .input:focus {
+    border: 1px solid #b2b2b2;
+}
+
+.wrapper .header .form .btn {
+    margin: 10px 0;
+    background-color: #3897f0;
+    border: 1px solid #3897f0;
+    border-radius: 4px;
+    text-align: center;
+    padding: 5px;
+}
+
+.wrapper .header .form .btn a {
+    color: #fff;
+    display: block;
+}
+
+.wrapper .header .or {
+    height: 19.5px;
+    width: 268px;
+
+}
+
+.wrapper .header .or .line:first-child {
+    float: left;
+    width: 105px;
+    height: 2px;
+    margin-top: 7px;
+    background: #efefef;
+}
+
+.wrapper .header .or .line:last-child {
+    float: right;
+    width: 105px;
+    height: 2px;
+    margin-top: 7px;
+    background: #efefef;
+}
+
+.wrapper .header .or p {
+    float: left;
+    padding-left: 21px;
+    color: #999;
+    font-size: 12px;
+}
+
+.wrapper .dif .Already_have {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .dif .Already_have p {
+    color: #385185;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.wrapper .dif .forget {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.wrapper .dif .forget a {
+    color: #003569;
+}
+
+input[type=submit] {
+    width: 268px;
+    height: 35px;
+    line-height: 21px;
+    text-align: center;
+    background-color: #3897f0;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}

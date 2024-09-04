@@ -1,0 +1,100 @@
+body {
+    background-color: #fafafa;
+    font-family: Arial, sans-serif; /* 设置默认字体 */
+}
+
+.thehead {
+    width: 700px;
+    height: 60px;
+    margin: 5px auto;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.body {
+    width: 700px;
+    height: 680px;
+    margin: 10px auto;
+    background-color: #fff;
+    border: 2px solid #3897f0;
+}
+
+.box {
+    width: 695px;
+    height: 80px;
+    background-color: #fff;
+    padding-top: 40px;
+    padding-left: 40px;
+    border: 1px solid #eee;
+    font-size: 20px;
+}
+.box input[type=text]::placeholder{
+    font-size: 15px;
+}
+.box textarea{
+    font-size: 20px;
+}
+.box select {
+    width: 200px;
+    height: 35px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+input[type=file] {
+    width: 200px;
+    height: 50px;
+    padding-left: 8px;
+}
+
+input[type=submit], input[type=reset] {
+    width: 240px;
+    height: 32px;
+    text-align: center;
+    background-color: #3897f0;
+    border-radius: 15px;
+    margin-left: 75px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+input[type=submit]:hover {
+    background-color: #27ba9b;
+}
+input[type=reset]:hover {
+    background-color: #980000;
+}
+
+.file {
+    position: relative;
+    width: 360px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.file_up {
+    font-size: 16px;
+    text-align: left;
+}
+
+.file input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+

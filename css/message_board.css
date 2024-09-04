@@ -1,0 +1,154 @@
+/* Basic Grey */
+
+.basic-grey {
+
+         margin-left:auto;
+         margin-right:auto;
+         max-width: 700px;
+         background: #555;
+         padding: 25px 30px 25px 30px;
+         font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+         color: #D3D3D3;
+         text-shadow: 1px 1px 1px #444;
+         border: none;
+         border-radius: 5px;
+         -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+}
+
+.basic-grey h1 {
+
+         padding: 0px 0px 10px 40px;
+
+         display: block;
+
+         border-bottom: 1px solid #444;
+
+         margin: -10px -30px 30px -30px;
+
+
+}
+
+.basic-grey h1>span {
+
+         display: block;
+
+         font-size: 11px;
+
+}
+
+.basic-grey label {
+
+         display: block;
+
+         margin: 0px 0px 5px;
+
+}
+
+.basic-grey label>span {
+
+         float: left;
+
+         width: 20%;
+
+         text-align: right;
+
+         padding-right: 10px;
+
+         margin-top: 10px;
+
+         color: bold;
+
+}
+
+.basic-grey input[type="text"], .basic-grey input[type="email"], .basic-grey textarea, .basic-grey select {
+         border: none;
+         color: #525252;
+         height: 25px;
+         line-height:15px;
+         margin-bottom: 16px;
+         margin-right: 6px;
+         margin-top: 2px;
+         outline: 0 none;
+         padding: 5px 0px 5px 5px;
+         width: 70%;
+         border-radius: 2px;
+         -webkit-border-radius: 2px;
+         -moz-border-radius: 2px;
+         -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+         background: #DFDFDF;
+
+}
+
+.basic-grey textarea{
+
+         padding: 5px 3px 3px 5px;
+
+}
+
+.basic-grey select {
+         background: #DFDFDF url('down-arrow.png') no-repeat right;
+
+         background: #DFDFDF url('down-arrow.png') no-repeat right;
+
+         appearance:none;
+
+         -webkit-appearance:none;
+
+         -moz-appearance: none;
+
+         text-indent: 0.01px;
+
+         text-overflow: '';
+
+         width: 70%;
+
+         height: 35px;
+
+         color: #525252;
+
+         line-height: 25px;
+}
+
+.basic-grey textarea{
+
+         height:100px;
+
+         padding: 5px 0px 0px 5px;
+
+         width: 70%;
+
+}
+
+.basic-grey .button {
+
+
+         background: #980000;
+
+         border: none;
+
+         padding: 10px 25px 10px 25px;
+
+         color: #585858;
+
+         border-radius: 4px;
+
+         -moz-border-radius: 4px;
+
+         -webkit-border-radius: 4px;
+
+         text-shadow: 1px 1px 1px #FFE477;
+
+         font-weight: lighter;
+
+         box-shadow: 1px 1px 1px #3D3D3D;
+
+         -webkit-box-shadow:1px 1px 1px #3D3D3D;
+
+         -moz-box-shadow:1px 1px 1px #3D3D3D;
+}
+
+.basic-grey .button:hover {
+         color: #333;
+         background-color: #EBEBEB;
+}

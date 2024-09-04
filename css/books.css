@@ -1,0 +1,56 @@
+.books {
+    height: 1000px;
+}
+
+.books .books_head {
+    margin: 50px auto 0;
+    width: 200px;
+    height: 120px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.box {
+    width: 1200px;
+    margin: 10px auto;
+}
+
+.books .box li {
+    float: left;
+    width: 350px;
+    height: 250px;
+    text-align: center;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    padding: 5px 20px;
+    border-right: 2px solid #3897f0;
+    border-bottom: 2px solid #3897f0;
+    border-radius: 1px;
+    box-shadow: -5px 5px 5px 3px #333;
+    transition: all 1s;
+}
+
+.books .box li:hover {
+    background-color: #3897f0;
+}
+
+.books .box li a:hover {
+    font-size: 20px;
+    font-weight: 10px;
+}
+
+.books .box li a p {
+    line-height: 40px;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.books .box li a {
+    line-height: 30px;
+}
+
+.books .box li:nth-child(3n) {
+    margin-right: 0;
+}

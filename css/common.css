@@ -1,0 +1,200 @@
+.wrapper {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.shortcut {
+    background-color: #333;
+    padding: 10px 0;
+}
+.shortcut .wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+.shortcut .shortcut-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.shortcut .shortcut-links li {
+    margin-left: 20px;
+}
+.shortcut .shortcut-links a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+.shortcut .shortcut-links a:hover {
+    color: #1e87f0;
+}
+
+
+.header {
+    margin: 30px auto;
+    height: 80px;
+    background-color: #fff;
+}
+
+.header .logo {
+    float: left;
+    width: 100px;
+    height: 80px;
+    background-color: #fff;
+    margin-right: 100px;
+}
+
+.logo h1 a {
+    display: block;
+    width: 100px;
+    height: 80px;
+    background-image: url(../images/下载.png);
+    background-size: 100px 80px;
+    font-size: 0;
+    background-repeat: no-repeat;
+}
+
+.nav {
+    float: left;
+    margin-left: 40px;
+    height: 80px;
+
+}
+
+.search {
+    float: left;
+    margin-top: 24px;
+    margin-left: 34px;
+    width: 300px;
+    height: 35px;
+    border-bottom: 2px solid #000;
+    position: relative;
+}
+
+.search input {
+    width: 172px;
+    height: 28px;
+    padding-left: 30px;
+}
+
+.search input::placeholder {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.search span {
+    display: block;
+    position: absolute;
+    left: 2px;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/sprites.png);
+    background-position: -79px -69px;
+
+}
+
+.nav ul li {
+    display: block;
+    float: left;
+    margin-right: 55px;
+    line-height: 80px;
+    font-size: 20px;
+}
+
+.nav li a {
+    padding-bottom: 10px;
+}
+
+.nav ul li a:hover {
+    color: #3897f0;
+    border-bottom: 1px solid #27ba9b;
+}
+
+
+
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    margin-top: auto;
+}
+
+.footer .wrapper {
+    width: 100%;
+    max-width: 1393px; /* 设置最大宽度，保证footer的宽度不超过1393px */
+    margin: 0 auto; /* 居中 */
+}
+
+.footer .top {
+    padding-top: 59px;
+    padding-left: 135px;
+    height: 175px;
+    border-bottom: 2px solid #434343;
+}
+
+.footer .top li {
+    position: relative;
+    float: left;
+    width: 195px;
+    height: 58px;
+    margin-right: 300px;
+    color: #fff;
+}
+
+.footer .top li:last-child {
+    margin-right: 0;
+}
+
+/* 伪元素是行内显示模式 */
+.footer .top li::before {
+    position: absolute;
+    left: 0;
+    top: -7px;
+    display: inline-block;
+    content: '';
+    width: 58px;
+    height: 58px;
+    background-image: url(../images/sprites.png);
+    vertical-align: middle;
+}
+
+.footer .top li span {
+    display: inline-block;
+    margin-left: 77px;
+    font-size: 20px;
+    padding-top: 8px;
+}
+
+.footer .top li:nth-child(2)::before {
+    background-position: -64px 0;
+}
+
+.footer .top li:nth-child(3)::before {
+    background-position: -129px 0;
+}
+
+.footer .bottom {
+    text-align: center;
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.footer .bottom p {
+    margin: 0;
+    font-size: 20px; /* 增大字体大小 */
+    color: #555555;
+}
+
+.footer .bottom a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 15px; /* 调整链接之间的间距 */
+    transition: color 0.3s;
+}
+
+.footer .bottom a:hover {
+    color: #1e87f0;
+}

@@ -1,0 +1,195 @@
+body {
+    background-color: #eee;
+}
+
+.body {
+    height: 600px;
+    width: 1200px;
+    margin: 5px auto;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    flex: 1; /* 占据剩余空间 */
+    flex-direction: column;
+    width: 900px;
+    height: 600px;
+    margin: 1px 30px 5px 0; /* 调整外边距以增加间隔 */
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+.right1 {
+    flex: 1; /* 占据剩余空间 */
+    flex-direction: column;
+    width: 900px;
+    height: auto;
+    margin: 1px 30px 5px 0; /* 调整外边距以增加间隔 */
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 10px;
+    flex: 1;
+}
+.left {
+    width: 200px;
+    height: 600px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+
+/* 文本段落 */
+.left p {
+    margin: 0; /* 移除段落默认的外边距 */
+    padding: 10px 0; /* 添加内边距 */
+    font-size: 20px;
+    text-align: center;
+}
+.left p span {
+    display: inline-block;
+    height: 30px;
+    font-size: 30px;
+    margin: 0 30px; /* 通过 margin 控制间距 */
+    cursor: pointer;
+}
+.left p span:hover {
+    color: #3897f0;
+}
+
+/* 分割线 */
+.line {
+    height: 1px;
+    border: 1px solid #eee;
+    margin: 10px 0; /* 添加上下外边距 */
+}
+
+.left_bottom1 ul li {
+    height: 50px;
+    line-height: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.left_bottom1 ul li a:hover {
+    color: #3897f0;
+    border-bottom: 1px solid #3897f0;
+}
+
+.left_bottom ul li {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.left_bottom ul li a:hover {
+    color: #3897f0;
+    border-bottom: 1px solid #3897f0;
+}
+
+.right .one {
+    width: 100%;
+    line-height: 0px;
+    height: 90px;
+    font-size: 30px;
+    padding: 44px 0 0 40px;
+}
+
+.right1 .one {
+    width: 100%;
+    line-height: 0px;
+    height: 90px;
+    font-size: 30px;
+    padding: 44px 0 0 40px;
+}
+
+.right_bottom .r_left {
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+
+.right_bottom .r_left img {
+    margin: 10px 0 0 40px;
+    border-radius: 50%;
+}
+
+.right_bottom .r_right {
+    width: calc(100% - 280px);
+    height: 880px;
+    float: right;
+    margin-right: 30px;
+}
+
+.r_right .box {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    line-height: 60px;
+}
+.r_right .box1 {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.r_right .box1 table {
+    width: 100%; /* 让表格充满父容器 */
+    border-collapse: collapse; /* 合并表格边框 */
+}
+
+.r_right .box1 th, .box1 td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+.r_right .box1 th {
+    background-color: #f2f2f2;
+}
+.r_right .box1 p {
+    margin: 0;
+}
+
+
+.larger-placeholder::placeholder {
+    font-size: 15px;
+}
+.larger-select {
+    width: 120px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.r_right .box:first-child {
+    font-size: 26px;
+    font-weight: 600;
+}
+.r_right .edit {
+    width: 200px;
+    height: 30px;
+    background-color: #3897f0;
+    margin: 40px 0 0 30px;
+    text-align: center;
+    color: #fff;
+
+}
+
+input[type=submit] {
+    width: 200px;
+    height: 40px;
+    background-color: #3897f0;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px; /* 适当调整上边距 */
+    margin-left: 0px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+input[type=submit]:hover {
+    background-color: #2077d3;
+}
